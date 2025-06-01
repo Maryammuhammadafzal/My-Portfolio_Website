@@ -1,4 +1,4 @@
-import {  Mona_Sans , Nova_Round } from "next/font/google";
+import {  Mona_Sans , SUSE } from "next/font/google";
 import "./globals.css";
 
 const monaSans = Mona_Sans({
@@ -6,8 +6,8 @@ const monaSans = Mona_Sans({
   subsets: ["latin"],
   weight: [ '200', '300', '400','500','600','700','800','900']
 });
-const novaRound = Nova_Round({
-  variable: "--font-nova-round",
+const suse = SUSE({
+  variable: "--font-suse",
   subsets: ["latin"],
   weight: [ '400']
 });

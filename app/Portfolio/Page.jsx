@@ -1952,7 +1952,7 @@ const Portfolio = () => {
               >
                 <div className="left max-w-2xl  flex flex-col justify-between h-auto">
                   <div className="flex flex-col gap-6">
-                    <h4 className="text-8xl font-bold text-neutral-500  items-center">
+                    <h4 className="text-8xl font-extrabold text-neutral-500  items-center">
                       &lt;{index + 1}&gt;
                     </h4>
                     <h2 className="text-3xl font-bold text-white">
@@ -1983,7 +1983,7 @@ const Portfolio = () => {
                   </div>
 
                   <div className="flex flex-col gap-6">
-                    <p>
+                    <p className="text-white">
                       As a full-stack developer on this project, I took
                       ownership of both the frontend and backend development,
                       ensuring a seamless and intuitive user experience.
@@ -1999,6 +1999,10 @@ const Portfolio = () => {
                       recommendations.
                     </p>
                   </div>
+                </div>
+                <div className="right grid grid-rows-2">
+                  <Image src={project.image} alt="image" width={300} height={400} />
+                  <Image src={project.image} alt="image" width={300} height={400} /> 
                 </div>
               </div>
             ))}
