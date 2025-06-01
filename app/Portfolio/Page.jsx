@@ -1762,6 +1762,7 @@ import { Github, Linkedin, Twitter, Mail, ChevronDown, ChevronLeft, ChevronRight
 import Image from "next/image";
 import Head from "next/head";
 import { TwitterLogoIcon } from "@radix-ui/react-icons";
+import GitHubContributions from "@/components/GitHubContributions";
 
 const navItems = [
   { name: "Home", href: "#home" },
@@ -1803,7 +1804,7 @@ const Portfolio = () => {
   const [modalProject, setModalProject] = useState(null);
 
   return (
-    <div className="w-full min-h-screen bg-white text-black font-sans">
+    <div className="w-full min-h-screen bg-white text-black ">
       {/* Sticky Navbar */}
       <motion.nav
         initial={{ y: -100 }}
@@ -1904,7 +1905,10 @@ const Portfolio = () => {
             className="md:w-1/2"
           >
             <div className="bg-gray-300 h-64 md:h-80 rounded-lg flex items-center justify-center shadow-lg">
-              <p className="text-gray-500 text-center">[GitHub Contribution Chart Placeholder]</p>
+              <GitHubContributions />
+              {/* <img src="https://green-wall.leoku.dev/share/Maryammuhammadafzal?start=2024&showSafariHeader=false&showAttribution=false" alt="GitHub Contributions Chart"/> */}
+              {/* <img src="https://github-readme-stats.vercel.app/api?username=yourusername&show_icons=true&hide_title=true&hide=issues" alt="GitHub Contributions Chart"/> */}
+              {/* <iframe src="https://ghchart.rshah.org/maryammuhammadafzal" width="100%" height="300px"></iframe> */}
             </div>
           </motion.div>
         </div>
