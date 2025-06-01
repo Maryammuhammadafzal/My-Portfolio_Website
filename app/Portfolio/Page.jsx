@@ -1,13 +1,13 @@
 // 'use client'
 // import React, { useState, useEffect } from 'react';
 // import Image from "next/image";
-// import { 
-//   Mail, 
-//   Phone, 
-//   MapPin, 
-//   Github, 
-//   Linkedin, 
-//   Download, 
+// import {
+//   Mail,
+//   Phone,
+//   MapPin,
+//   Github,
+//   Linkedin,
+//   Download,
 //   ExternalLink,
 //   Code,
 //   Database,
@@ -68,8 +68,7 @@
 //       image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=400&h=250&fit=crop"
 //     }
 //   ];
-  
-  
+
 //   // Mock certificates data
 //   const certificates = [
 //     {
@@ -177,10 +176,10 @@
 //   const handleSubmit = async (e) => {
 //     e.preventDefault();
 //     setIsSubmitting(true);
-    
+
 //     // Simulate API call
 //     await new Promise(resolve => setTimeout(resolve, 1000));
-    
+
 //     alert('Thank you for your message! I will get back to you soon.');
 //     setFormData({ name: '', email: '', message: '', whatsapp: '' });
 //     setIsSubmitting(false);
@@ -205,7 +204,7 @@
 //                 Maryam Afzal
 //               </h1>
 //             </div>
-            
+
 //             {/* Desktop Navigation */}
 //             <div className="hidden md:block">
 //               <div className="ml-10 flex items-baseline space-x-4">
@@ -214,8 +213,8 @@
 //                     key={item}
 //                     onClick={() => scrollToSection(item)}
 //                     className={`px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 transform hover:scale-105 ${
-//                       activeSection === item 
-//                         ? 'text-blue-600 bg-blue-50 shadow-sm' 
+//                       activeSection === item
+//                         ? 'text-blue-600 bg-blue-50 shadow-sm'
 //                         : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'
 //                     }`}
 //                   >
@@ -245,8 +244,8 @@
 //                 key={item}
 //                 onClick={() => scrollToSection(item)}
 //                 className={`block px-3 py-2 rounded-md text-base font-medium w-full text-left transition-all duration-300 transform hover:translate-x-2 ${
-//                   activeSection === item 
-//                     ? 'text-blue-600 bg-blue-50' 
+//                   activeSection === item
+//                     ? 'text-blue-600 bg-blue-50'
 //                     : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'
 //                 }`}
 //               >
@@ -272,7 +271,7 @@
 //               <div className="absolute -top-4 -right-4 w-8 h-8 bg-yellow-400 rounded-full animate-ping"></div>
 //               <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-green-400 rounded-full animate-pulse"></div>
 //             </div>
-            
+
 //             <div className="space-y-4">
 //               <h1 className="text-5xl md:text-7xl font-bold">
 //                 <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent animate-gradient">
@@ -287,19 +286,19 @@
 //                 <span className="mx-2">Stack Developer</span>
 //               </div>
 //               <p className="text-lg text-gray-500 max-w-2xl mx-auto leading-relaxed animate-fade-in">
-//                 Passionate full-stack developer with <AnimatedCounter target={3} suffix="+ years" /> of experience building scalable web applications. 
+//                 Passionate full-stack developer with <AnimatedCounter target={3} suffix="+ years" /> of experience building scalable web applications.
 //                 Specializing in React.js, Node.js, and modern web technologies to create exceptional user experiences.
 //               </p>
 //             </div>
 
 //             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-//               <button 
+//               <button
 //                 onClick={() => scrollToSection('projects')}
 //                 className="px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 shadow-lg font-medium flex items-center justify-center gap-2 animate-pulse"
 //               >
 //                 View My Work <ArrowRight className="w-5 h-5" />
 //               </button>
-//               <button 
+//               <button
 //                 onClick={() => scrollToSection('contact')}
 //                 className="px-8 py-4 border-2 border-blue-600 text-blue-600 rounded-lg hover:bg-blue-600 hover:text-white transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 font-medium"
 //               >
@@ -329,18 +328,18 @@
 //                 Building Digital Solutions with Passion
 //               </h3>
 //               <p className="text-gray-600 leading-relaxed">
-//                 With <AnimatedCounter target={3} suffix="+ years" /> of dedicated experience in full-stack development, I specialize in creating 
-//                 robust, scalable web applications using the MERN stack. My journey began with a fascination 
-//                 for problem-solving through code, and has evolved into a career focused on delivering 
+//                 With <AnimatedCounter target={3} suffix="+ years" /> of dedicated experience in full-stack development, I specialize in creating
+//                 robust, scalable web applications using the MERN stack. My journey began with a fascination
+//                 for problem-solving through code, and has evolved into a career focused on delivering
 //                 exceptional user experiences.
 //               </p>
 //               <p className="text-gray-600 leading-relaxed">
-//                 I excel in both frontend and backend development, with expertise in modern React.js 
-//                 applications, RESTful APIs, and database design. My approach combines technical excellence 
-//                 with user-centered design, ensuring every project not only functions flawlessly but also 
+//                 I excel in both frontend and backend development, with expertise in modern React.js
+//                 applications, RESTful APIs, and database design. My approach combines technical excellence
+//                 with user-centered design, ensuring every project not only functions flawlessly but also
 //                 provides an intuitive and engaging experience.
 //               </p>
-              
+
 //               <div className="grid sm:grid-cols-2 gap-6 pt-6">
 //                 {[
 //                   { icon: Code, title: "Frontend Expert", desc: "React.js, Next.js, Modern CSS", color: "blue" },
@@ -348,7 +347,7 @@
 //                   { icon: Database, title: "Database Design", desc: "MongoDB, Firebase", color: "purple" },
 //                   { icon: Globe, title: "Deployment", desc: "Vercel, Render, Railway", color: "orange" }
 //                 ].map((item, index) => (
-//                   <div 
+//                   <div
 //                     key={index}
 //                     className="flex items-center gap-3 transform hover:scale-105 transition-all duration-300 hover:shadow-lg rounded-lg p-2"
 //                     style={{animationDelay: `${index * 0.1}s`}}
@@ -421,9 +420,9 @@
 //                       <span className="text-gray-500 text-sm">{skill.level}%</span>
 //                     </div>
 //                     <div className="w-full bg-gray-200 rounded-full h-2">
-//                       <div 
+//                       <div
 //                         className="bg-gradient-to-r from-blue-500 to-blue-600 h-2 rounded-full transition-all duration-1000 ease-out transform hover:scale-105"
-//                         style={{ 
+//                         style={{
 //                           width: isVisible.skills ? `${skill.level}%` : '0%',
 //                           transitionDelay: `${index * 0.1}s`
 //                         }}
@@ -450,9 +449,9 @@
 //                       <span className="text-gray-500 text-sm">{skill.level}%</span>
 //                     </div>
 //                     <div className="w-full bg-gray-200 rounded-full h-2">
-//                       <div 
+//                       <div
 //                         className="bg-gradient-to-r from-green-500 to-green-600 h-2 rounded-full transition-all duration-1000 ease-out transform hover:scale-105"
-//                         style={{ 
+//                         style={{
 //                           width: isVisible.skills ? `${skill.level}%` : '0%',
 //                           transitionDelay: `${(index + 5) * 0.1}s`
 //                         }}
@@ -479,9 +478,9 @@
 //                       <span className="text-gray-500 text-sm">{skill.level}%</span>
 //                     </div>
 //                     <div className="w-full bg-gray-200 rounded-full h-2">
-//                       <div 
+//                       <div
 //                         className="bg-gradient-to-r from-purple-500 to-purple-600 h-2 rounded-full transition-all duration-1000 ease-out transform hover:scale-105"
-//                         style={{ 
+//                         style={{
 //                           width: isVisible.skills ? `${skill.level}%` : '0%',
 //                           transitionDelay: `${(index + 9) * 0.1}s`
 //                         }}
@@ -508,15 +507,15 @@
 
 //           <div className="grid md:grid-cols-2 gap-8">
 //             {projects.map((project, index) => (
-//               <div 
-//                 key={project.id} 
-//                 className={`bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 border border-gray-100 group ${isVisible.projects ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} 
+//               <div
+//                 key={project.id}
+//                 className={`bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 border border-gray-100 group ${isVisible.projects ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
 //                 style={{ animationDelay: `${index * 0.1}s` }}
 //               >
 //                 <div className="overflow-hidden rounded-t-2xl">
-//                   <img 
-//                     src={project.image} 
-//                     alt={project.title} 
+//                   <img
+//                     src={project.image}
+//                     alt={project.title}
 //                     className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
 //                   />
 //                 </div>
@@ -529,8 +528,8 @@
 //                   </p>
 //                   <div className="mt-4 flex flex-wrap gap-2">
 //                     {project.technologies.map((tech, techIndex) => (
-//                       <span 
-//                         key={techIndex} 
+//                       <span
+//                         key={techIndex}
 //                         className="px-3 py-1 bg-blue-100 text-blue-600 text-sm rounded-full group-hover:bg-blue-200 transition-colors"
 //                       >
 //                         {tech}
@@ -538,17 +537,17 @@
 //                     ))}
 //                   </div>
 //                   <div className="mt-6 flex gap-4">
-//                     <a 
-//                       href={project.liveDemo} 
-//                       target="_blank" 
+//                     <a
+//                       href={project.liveDemo}
+//                       target="_blank"
 //                       rel="noopener noreferrer"
 //                       className="flex items-center gap-2 text-blue-600 hover:text-blue-800 font-medium group-hover:scale-105 transition-all"
 //                     >
 //                       <ExternalLink className="w-4 h-4" /> Live Demo
 //                     </a>
-//                     <a 
-//                       href={project.github} 
-//                       target="_blank" 
+//                     <a
+//                       href={project.github}
+//                       target="_blank"
 //                       rel="noopener noreferrer"
 //                       className="flex items-center gap-2 text-gray-600 hover:text-gray-800 font-medium group-hover:scale-105 transition-all"
 //                     >
@@ -575,16 +574,16 @@
 
 //           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
 //             {certificates.map((certificate, index) => (
-//               <div 
-//                 key={certificate.id} 
-//                 className={`bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100 cursor-pointer ${isVisible.certificates ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} 
+//               <div
+//                 key={certificate.id}
+//                 className={`bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100 cursor-pointer ${isVisible.certificates ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
 //                 style={{ animationDelay: `${index * 0.1}s` }}
 //                 onClick={() => setSelectedCertificate(certificate)}
 //               >
 //                 <div className="overflow-hidden rounded-t-2xl">
-//                   <img 
-//                     src={certificate.image} 
-//                     alt={certificate.title} 
+//                   <img
+//                     src={certificate.image}
+//                     alt={certificate.title}
 //                     className="w-full h-48 object-cover hover:scale-110 transition-transform duration-500"
 //                   />
 //                 </div>
@@ -603,23 +602,23 @@
 //           {selectedCertificate && (
 //             <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
 //               <div className="bg-white rounded-2xl max-w-lg w-full p-6 relative animate-fade-in">
-//                 <button 
-//                   onClick={() => setSelectedCertificate(null)} 
+//                 <button
+//                   onClick={() => setSelectedCertificate(null)}
 //                   className="absolute top-4 right-4 text-gray-600 hover:text-gray-800"
 //                 >
 //                   <X className="w-6 h-6" />
 //                 </button>
-//                 <img 
-//                   src={selectedCertificate.image} 
-//                   alt={selectedCertificate.title} 
+//                 <img
+//                   src={selectedCertificate.image}
+//                   alt={selectedCertificate.title}
 //                   className="w-full h-64 object-cover rounded-lg mb-4"
 //                 />
 //                 <h3 className="text-xl font-semibold text-gray-900">{selectedCertificate.title}</h3>
 //                 <p className="text-gray-600 mt-2">{selectedCertificate.issuer}</p>
 //                 <p className="text-gray-500 text-sm">{selectedCertificate.date}</p>
-//                 <a 
-//                   href={selectedCertificate.image} 
-//                   download 
+//                 <a
+//                   href={selectedCertificate.image}
+//                   download
 //                   className="mt-4 inline-flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
 //                 >
 //                   <Download className="w-4 h-4" /> Download Certificate
@@ -642,9 +641,9 @@
 //           </div>
 
 //           <div className={`flex justify-center transition-all duration-1000 ${isVisible.resume ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-//             <a 
+//             <a
 //               href="/path-to-resume.pdf" // Replace with actual resume path
-//               download 
+//               download
 //               className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 shadow-lg font-medium animate-pulse"
 //             >
 //               <Download className="w-5 h-5" /> Download Resume
@@ -669,22 +668,22 @@
 //             <div className={`space-y-8 transition-all duration-1000 delay-200 ${isVisible.contact ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
 //                 <h3 className="text-xl font-semibold text-gray-900 mb-6">Connect with Me</h3>
 //                 <div className="space-y-4">
-//                   <a 
-//                     href="mailto:maryam@example.com" 
+//                   <a
+//                     href="mailto:maryam@example.com"
 //                     className="flex items-center gap-3 text-gray-600 hover:text-blue-600 transition-colors"
 //                   >
 //                     <Mail className="w-5 h-5" /> maryam@example.com
 //                   </a>
-//                   <a 
-//                     href="https://wa.me/+1234567890" 
-//                     target="_blank" 
+//                   <a
+//                     href="https://wa.me/+1234567890"
+//                     target="_blank"
 //                     rel="noopener noreferrer"
 //                     className="flex items-center gap-3 text-gray-600 hover:text-green-600 transition-colors"
 //                   >
 //                     <MessageSquare className="w-5 h-5" /> WhatsApp
 //                   </a>
-//                   <a 
-//                     href="tel:+1234567890" 
+//                   <a
+//                     href="tel:+1234567890"
 //                     className="flex items-center gap-3 text-gray-600 hover:text-blue-600 transition-colors"
 //                   >
 //                     <Phone className="w-5 h-5" /> +123-456-7890
@@ -694,25 +693,25 @@
 //                   </div>
 //                 </div>
 //                 <div className="mt-6 flex gap-4">
-//                   <a 
-//                     href="https://www.linkedin.com/in/marium-afzal-916b012bb/" 
-//                     target="_blank" 
+//                   <a
+//                     href="https://www.linkedin.com/in/marium-afzal-916b012bb/"
+//                     target="_blank"
 //                     rel="noopener noreferrer"
 //                     className="p-2 bg-blue-100 text-blue-600 rounded-lg hover:bg-blue-200 transition-colors transform hover:scale-110"
 //                   >
 //                     <Linkedin className="w-5 h-5" />
 //                   </a>
-//                   <a 
-//                     href="https://github.com/Maryammuhammadafzal" 
-//                     target="_blank" 
+//                   <a
+//                     href="https://github.com/Maryammuhammadafzal"
+//                     target="_blank"
 //                     rel="noopener noreferrer"
 //                     className="p-2 bg-gray-100 text-gray-600 rounded-lg hover:bg-gray-200 transition-colors transform hover:scale-110"
 //                   >
 //                     <Github className="w-5 h-5" />
 //                   </a>
-//                   <a 
-//                     href="https://facebook.com" 
-//                     target="_blank" 
+//                   <a
+//                     href="https://facebook.com"
+//                     target="_blank"
 //                     rel="noopener noreferrer"
 //                     className="p-2 bg-blue-100 text-blue-600 rounded-lg hover:bg-blue-200 transition-colors transform hover:scale-110"
 //                   >
@@ -720,9 +719,9 @@
 //                       <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
 //                     </svg>
 //                   </a>
-//                   <a 
-//                     href="https://instagram.com" 
-//                     target="_blank" 
+//                   <a
+//                     href="https://instagram.com"
+//                     target="_blank"
 //                     rel="noopener noreferrer"
 //                     className="p-2 bg-pink-100 text-pink-600 rounded-lg hover:bg-pink-200 transition-colors transform hover:scale-110"
 //                   >
@@ -863,25 +862,25 @@
 //             <div>
 //               <h3 className="text-lg font-semibold mb-4">Connect</h3>
 //               <div className="flex gap-4">
-//                 <a 
-//                   href="https://www.linkedin.com/in/marium-afzal-916b012bb/" 
-//                   target="_blank" 
+//                 <a
+//                   href="https://www.linkedin.com/in/marium-afzal-916b012bb/"
+//                   target="_blank"
 //                   rel="noopener noreferrer"
 //                   className="p-2 bg-blue-800 rounded-lg hover:bg-blue-700 transition-colors transform hover:scale-110"
 //                 >
 //                   <Linkedin className="w-5 h-5" />
 //                 </a>
-//                 <a 
-//                   href="https://github.com/Maryammuhammadafzal" 
-//                   target="_blank" 
+//                 <a
+//                   href="https://github.com/Maryammuhammadafzal"
+//                   target="_blank"
 //                   rel="noopener noreferrer"
 //                   className="p-2 bg-gray-700 rounded-lg hover:bg-gray-600 transition-colors transform hover:scale-110"
 //                 >
 //                   <Github className="w-5 h-5" />
 //                 </a>
-//                 <a 
-//                   href="https://facebook.com" 
-//                   target="_blank" 
+//                 <a
+//                   href="https://facebook.com"
+//                   target="_blank"
 //                   rel="noopener noreferrer"
 //                   className="p-2 bg-blue-800 rounded-lg hover:bg-blue-700 transition-colors transform hover:scale-110"
 //                 >
@@ -889,9 +888,9 @@
 //                     <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
 //                   </svg>
 //                 </a>
-//                 <a 
-//                   href="https://instagram.com" 
-//                   target="_blank" 
+//                 <a
+//                   href="https://instagram.com"
+//                   target="_blank"
 //                   rel="noopener noreferrer"
 //                   className="p-2 bg-pink-800 rounded-lg hover:bg-pink-700 transition-colors transform hover:scale-110"
 //                 >
@@ -914,8 +913,6 @@
 // };
 
 // export default Portfolio;
-
-
 
 // 'use client'
 // import React, { useState } from 'react';
@@ -1097,7 +1094,7 @@
 
 //       {/* Hero Section */}
 //       <section id="home" className="min-h-screen flex items-center justify-center bg-[#0A0A0A] pt-16 relative">
-//          {[...Array(8)].map((_, index) => { 
+//          {[...Array(8)].map((_, index) => {
 //           return <div key={index}><CodeBackground  /></div>
 //          })}
 //         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -1753,55 +1750,129 @@
 //   );
 // }
 
-
-'use client'
-import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Progress } from '@/components/ui/progress';
-import { Github, Linkedin, Twitter, Mail, ChevronDown } from 'lucide-react';
-import Image from 'next/image';
-import Head from 'next/head';
-import { TwitterLogoIcon } from '@radix-ui/react-icons';
+"use client";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Progress } from "@/components/ui/progress";
+import { Github, Linkedin, Twitter, Mail, ChevronDown, ChevronLeft, ChevronRight } from "lucide-react";
+import Image from "next/image";
+import Head from "next/head";
+import { TwitterLogoIcon } from "@radix-ui/react-icons";
 
 const navItems = [
-  { name: 'Home', href: '#home' },
-  { name: 'About', href: '#about' },
-  { name: 'Skills', href: '#skills' },
-  { name: 'Projects', href: '#projects' },
-  { name: 'Contact', href: '#contact' },
+  { name: "Home", href: "#home" },
+  { name: "About", href: "#about" },
+  { name: "Skills", href: "#skills" },
+  { name: "Projects", href: "#projects" },
+  { name: "Contact", href: "#contact" },
 ];
 
 const skills = [
-  { name: 'React', level: 90 },
-  { name: 'TypeScript', level: 85 },
-  { name: 'Tailwind CSS', level: 80 },
-  { name: 'Next.js', level: 75 },
+  { name: "React", level: 90 },
+  { name: "TypeScript", level: 85 },
+  { name: "Tailwind CSS", level: 80 },
+  { name: "Next.js", level: 75 },
 ];
 
 const projects = [
   {
-    title: 'Portfolio Website',
-    description: 'A sleek, modern portfolio with responsive design and animations.',
-    image: '/images/project1.jpg',
+    title: "Portfolio Website",
+    description:
+      "A sleek, modern portfolio with responsive design and animations.",
+    image: "/images/project1.jpg",
   },
   {
-    title: 'E-Commerce Platform',
-    description: 'A scalable e-commerce solution with seamless payment integration.',
-    image: '/images/project2.jpg',
+    title: "E-Commerce Platform",
+    description:
+      "A scalable e-commerce solution with seamless payment integration.",
+    image: "/images/project2.jpg",
   },
   {
-    title: 'Task Manager',
-    description: 'A real-time collaborative task management application.',
-    image: '/images/project3.jpg',
+    title: "Task Manager",
+    description: "A real-time collaborative task management application.",
+    image: "/images/project3.jpg",
   },
 ];
 
 const Portfolio = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [modalProject, setModalProject] = useState(null);
 
-}
+  return (
+    <div className="w-full min-h-screen bg-white text-black font-sans">
+      {/* Sticky Navbar */}
+      <motion.nav
+        initial={{ y: -100 }}
+        animate={{ y: 0 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+        className="sticky top-0 z-50 bg-white"
+      >
+        <div className="max-w-8xl w-full mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between items-center h-20">
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.2 }}
+              className="flex items-center"
+            >
+              <span className="text-2xl flex justify-center items-center font-extrabold tracking-tight">
+                <ChevronLeft size={30} className="mt-1 -mr-2" />MernStackDeveloper<ChevronRight size={30} className="mt-1 -ml-2" />
+              </span>
+            </motion.div>
+            <div className="hidden md:flex items-center space-x-10">
+              {navItems.map((item) => (
+                <motion.a
+                  key={item.name}
+                  href={item.href}
+                  className="text-gray-700 hover:text-blue-500 transition-colors duration-300"
+                  whileHover={{ scale: 1.1 }}
+                >
+                  {item.name}
+                </motion.a>
+              ))}
+            </div>
+            <div className="md:hidden flex items-center">
+              <Button variant="ghost" onClick={() => setIsOpen(!isOpen)}>
+                <ChevronDown
+                  className={`h-6 w-6 transform transition-transform ${
+                    isOpen ? "rotate-180" : ""
+                  }`}
+                />
+              </Button>
+            </div>
+          </div>
+        </div>
+        <AnimatePresence>
+          {isOpen && (
+            <motion.div
+              initial={{ height: 0, opacity: 0 }}
+              animate={{ height: "auto", opacity: 1 }}
+              exit={{ height: 0, opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              className="md:hidden bg-white shadow-md"
+            >
+              <div className="px-4 pt-2 pb-3 space-y-2">
+                {navItems.map((item) => (
+                  <a
+                    key={item.name}
+                    href={item.href}
+                    className="block text-gray-700 hover:text-blue-500 transition-colors"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {item.name}
+                  </a>
+                ))}
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </motion.nav>
+    </div>
+  );
+};
 
-export default Portfolio
+export default Portfolio;
