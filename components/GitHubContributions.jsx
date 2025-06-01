@@ -59,42 +59,43 @@
 import { useEffect, useState } from "react";
 
 export default function GitHubContributions() {
-  const [weeks, setWeeks] = useState([]);
+  const [contributions, setContributions] = useState([]);
 
   useEffect(() => {
     fetch("https://github-contributions-api.jogruber.de/v4/maryammuhammadafzal")
       .then((res) => res.json())
       .then((data) => {
-        console.log("Full API response:", data); // ✅ Debug log
-        if (data.contributions?.weeks?.length > 0) {
-          setWeeks(data.contributions.weeks);
-        } else {
-          console.error("No contribution data found.");
-        }
+        console.log("✅ Full API response:", data); // debugging
+        setContributions(data.contributions);
       })
-      .catch((err) => console.error("Error fetching GitHub data:", err));
+      .catch((error) => {
+        console.error("❌ Error fetching contributions:", error);
+      });
   }, []);
 
   return (
-    <div className="overflow-x-auto p-4 rounded-xl bg-background border shadow-sm w-full max-w-full">
+    <div className="overflow-x-auto p-4 bg-background border shadow-sm w-full max-w-full">
       <div className="flex gap-[4px]">
-        {weeks && weeks.slice(-53).map((week, weekIndex) => (
-          <div key={weekIndex} className="flex flex-col gap-[4px]">
-            {week.contributionDays.map((day, dayIndex) => (
-              <div
-                key={dayIndex}
-                className="w-6 h-6 rounded-md transition-all duration-300 hover:scale-110"
-                title={`${day.contributionCount} contributions`}
-                style={{
-                  backgroundColor: day.color,
-                }}
-              />
-            ))}
-          </div>
-        ))}
+        {contributions.length > 0 &&
+          Array.from({ length: contributions.length }, (_, weekIndex) => (
+            <div key={weekIndex} className="flex flex-col gap-[4px]">
+              {contributions
+                .filter((_, index) => Math.floor(index / 7) === weekIndex)
+                .map((day, dayIndex) => (
+                  <>
+                  {/* {console.log(day)} */}
+                  <div
+                    key={dayIndex}
+                    className={`w-5 h-5 rounded-sm transition-all duration-300 hover:scale-110 border border-gray-200 ${day.count > 0 ? "bg-lime-400" : "bg-white"}`}
+                    title={`${day.count} contributions`}
+                    // style={{ backgroundColor: day.count=== 1 ? "green" : "gray" }}
+                  />
+
+                  </>
+                ))}
+            </div>
+          ))}
       </div>
     </div>
   );
 }
-
-
