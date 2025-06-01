@@ -140,3 +140,6 @@ h3 {
   backdrop-filter: blur(10px);
   border: 1px solid var(--glass-border);
 }
+.main-heading{
+  font-size: 120px;
+}

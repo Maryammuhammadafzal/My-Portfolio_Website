@@ -1820,7 +1820,7 @@ const Portfolio = () => {
               className="flex items-center"
             >
               <span className="text-2xl flex justify-center items-center font-extrabold tracking-tight">
-                <ChevronLeft size={30} className="mt-1 -mr-2" />MernStackDeveloper<ChevronRight size={30} className="mt-1 -ml-2" />
+                <ChevronLeft size={30} className="mt-1 -mr-2" />MernStackDeveloper<ChevronRight size={30} className="mt-2 -ml-2" />
               </span>
             </motion.div>
             <div className="hidden md:flex items-center space-x-10">
@@ -1871,6 +1871,44 @@ const Portfolio = () => {
           )}
         </AnimatePresence>
       </motion.nav>
+
+      {/* Hero Section */}
+      <section id="home" className="min-h-screen flex flex-col items-center pb-20 pt-5 bg-white">
+        <div className="w-[95%] h-auto py-6 px-3">
+          <h1 className="main-heading w-full uppercase sm:text-5xl md:text-6xl font-bold ">Mern Stack Developer</h1>
+          <h1 className="main-heading w-full uppercase sm:text-5xl md:text-6xl font-bold ">Maryam Afzal</h1>
+        </div>
+        <div className="w-full max-w-8xl mx-auto px-4 sm:px-6 lg:px-20 flex flex-col md:flex-row items-center">
+          <motion.div
+            initial={{ opacity: 0, x: -100 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, ease: 'easeOut' }}
+            className="md:w-1/2 mb-10 md:mb-0"
+          >
+            <h2 className="text-3xl sm:text-lg md:text-xl font-extrabold flex leading-tight mb-6">
+             <ChevronLeft size={25} className="-mr-2" /> <span className="flex gap-2">React.js Next.js Redux.js Node.js JavaScript</span> <ChevronRight size={25} className="-ml-2" />
+            </h2>
+            <p className="text-lg text-gray-600 mb-8 max-w-md">
+              I'm a frontend developer passionate about building intuitive and responsive web applications with modern technologies.
+            </p>
+            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+              <Button>
+                Let's Connect
+              </Button>
+            </motion.div>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, x: 100 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.2, ease: 'easeOut' }}
+            className="md:w-1/2"
+          >
+            <div className="bg-gray-300 h-64 md:h-80 rounded-lg flex items-center justify-center shadow-lg">
+              <p className="text-gray-500 text-center">[GitHub Contribution Chart Placeholder]</p>
+            </div>
+          </motion.div>
+        </div>
+      </section>
     </div>
   );
 };
