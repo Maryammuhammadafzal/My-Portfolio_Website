@@ -65,8 +65,14 @@ export default function GitHubContributions() {
     fetch("https://github-contributions-api.jogruber.de/v4/maryammuhammadafzal")
       .then((res) => res.json())
       .then((data) => {
-        setWeeks(data.contributions.weeks);
-      });
+        console.log("Full API response:", data); // ✅ Debug log
+        if (data.contributions?.weeks?.length > 0) {
+          setWeeks(data.contributions.weeks);
+        } else {
+          console.error("No contribution data found.");
+        }
+      })
+      .catch((err) => console.error("Error fetching GitHub data:", err));
   }, []);
 
   return (
@@ -90,4 +96,5 @@ export default function GitHubContributions() {
     </div>
   );
 }
+
 
