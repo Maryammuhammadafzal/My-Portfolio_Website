@@ -1945,16 +1945,63 @@ const Portfolio = () => {
             Selected Projects
           </h3>
           <div className="w-full h-auto flex flex-col gap-20">
-            {
-              projects.map((project, index) => (
-                <div key={index} className="project w-full h-auto flex justify-between">
-                  <div className="left max-w-2xl flex flex-col justify-between h-auto">
-                    <h4 className="text-8xl font-bold text-neutral-400  items-center">  
-                       &lt;0{index+1}&gt;
-                </h4>
+            {projects.map((project, index) => (
+              <div
+                key={index}
+                className="project w-full h-auto flex justify-between"
+              >
+                <div className="left max-w-2xl  flex flex-col justify-between h-auto">
+                  <div className="flex flex-col gap-6">
+                    <h4 className="text-8xl font-bold text-neutral-500  items-center">
+                      &lt;{index + 1}&gt;
+                    </h4>
+                    <h2 className="text-3xl font-bold text-white">
+                      {project.title}
+                    </h2>
+                    <div>
+                      <h3 className="text-sm text-neutral-500">Role</h3>
+                      <h3 className="text-base text-lime-400">
+                        Mern Stack Developer
+                      </h3>
+                    </div>
+                  </div>
+                  <div className="flex flex-col gap-6">
+                    <div>
+                      <h3 className="text-sm text-neutral-500">
+                        Frontend Stack
+                      </h3>
+                      <h3 className="text-base text-white">
+                        Next js, Javascript , Tailwind Css
+                      </h3>
+                    </div>
+                    <div>
+                      <h3 className="text-sm text-neutral-500">Backend</h3>
+                      <h3 className="text-base text-white">
+                        Mongodb , Node js , Open Ai Api
+                      </h3>
+                    </div>
+                  </div>
+
+                  <div className="flex flex-col gap-6">
+                    <p>
+                      As a full-stack developer on this project, I took
+                      ownership of both the frontend and backend development,
+                      ensuring a seamless and intuitive user experience.
+                      
+                       I built the frontend from scratch using modern frameworks and
+                      tools like Next.js, TypeScript, and Tailwind CSS, adhering
+                      to industry best practices for structure and scalability.
+                      
+                      On the backend, I implemented a secure and efficient
+                      system using MongoDB for data management and Google
+                      Authentication for user login, Additionally, I integrated
+                      the Open A1 API to deliver personalized, A1-driven movie
+                      recommendations.
+                    </p>
                   </div>
                 </div>
-              ))}
+              </div>
+            ))}
           </div>
         </div>
       </section>
