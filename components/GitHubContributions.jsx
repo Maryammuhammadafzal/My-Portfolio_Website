@@ -54,7 +54,6 @@
 //   );
 // }
 
-
 "use client";
 import { GitHubLogoIcon } from "@radix-ui/react-icons";
 import { Github } from "lucide-react";
@@ -77,61 +76,70 @@ export default function GitHubContributions() {
 
   let StartDate;
   if (contributions[0]) {
-     StartDate = new Intl.DateTimeFormat('en', {
-    month: 'short',
-    year: 'numeric',
-  }).format(new Date(contributions[0].date));
-  console.log(contributions[0].date);
-  
+    StartDate = new Intl.DateTimeFormat("en", {
+      month: "short",
+      year: "numeric",
+    }).format(new Date(contributions[0].date));
+    console.log(contributions[0].date);
   }
 
   let lastDate;
-  if(contributions[contributions.length -1]) {
-    let last = contributions[contributions.length -1].date
+  if (contributions[contributions.length - 1]) {
+    let last = contributions[contributions.length - 1].date;
     if (contributions[0]) {
-       lastDate = new Intl.DateTimeFormat('en', {
-      month: 'short',
-      year: 'numeric',
-    }).format(new Date(last));
+      lastDate = new Intl.DateTimeFormat("en", {
+        month: "short",
+        year: "numeric",
+      }).format(new Date(last));
     }
   }
 
   return (
-   <div className="w-full h-full bg-white flex flex-col justify-center items-center">
-    <div className="w-full px-5 flex justify-between items-start">
-      <p className="text-base text-gray-500">{contributions.length} Contributions</p>
-      <a href="https://github.com/Maryammuhammadafzal">
-        <Github size={30} />
-      </a>
-    </div>
-     <div className="overflow-x-auto p-4 bg-background shadow-sm w-full max-w-full">
-      <div className="flex gap-[4px]">
-        {contributions.length > 0 &&
-          Array.from({ length: contributions.length }, (_, weekIndex) => (
-            <div key={weekIndex} className="flex flex-col gap-[4px]">
-              {contributions
-                .filter((_, index) => Math.floor(index / 7) === weekIndex)
-                .map((day, dayIndex) => (
-                  <>
-                  {/* {console.log(day)} */}
-                  <div
-                    key={dayIndex}
-                    className={`w-5 h-5 rounded-sm transition-all duration-300 hover:scale-110 border border-gray-200 ${day.count > 0 ? "bg-lime-400" : "bg-white"}`}
-                    title={`${day.count} contributions ${day.date}`}
-                    // style={{ backgroundColor: day.count=== 1 ? "green" : "gray" }}
-                  />
-
-                  </>
-                ))}
-            </div>
-          ))}
+    <div className="w-full h-full bg-white flex flex-col justify-center items-center">
+      <div className="w-full px-5 flex justify-between items-start">
+        <p className="text-base text-gray-500">
+          {contributions.length} Contributions
+        </p>
+        <a href="https://github.com/Maryammuhammadafzal">
+          <Github size={30} />
+        </a>
+      </div>
+      <div className="overflow-x-auto p-4 bg-background shadow-sm w-full max-w-full">
+        <div className="flex gap-[4px]">
+          {contributions.length > 0 &&
+            Array.from({ length: contributions.length }, (_, weekIndex) => (
+              <div key={weekIndex} className="flex flex-col gap-[4px]">
+                {contributions
+                  .filter((_, index) => Math.floor(index / 7) === weekIndex)
+                  .map((day, dayIndex) => (
+                    <>
+                      {/* {console.log(day)} */}
+                      <div
+                        key={dayIndex}
+                        className={`w-5 h-5 rounded-sm transition-all duration-300 hover:scale-110 border border-gray-200 ${
+                          day.count === 0
+                            ? "bg-white"
+                            : day.count < 2
+                            ? "bg-lime-200"
+                            : day.count < 3
+                            ? "bg-lime-300"
+                            : "bg-lime-400"
+                        }`}
+                        title={`${day.count} contributions ${day.date}`}
+                        // style={{ backgroundColor: day.count=== 1 ? "green" : "gray" }}
+                      />
+                    </>
+                  ))}
+              </div>
+            ))}
+        </div>
+      </div>
+      <div className="w-full px-5 flex justify-between items-end pt-3">
+        <p className="text-base text-gray-500">{lastDate}</p>
+        <p className="text-base text-gray-500">
+          {contributions[0] && StartDate}
+        </p>
       </div>
     </div>
-    <div className="w-full px-5 flex justify-between items-end pt-3">
-      <p className="text-base text-gray-500">{lastDate}</p>
-      <p className="text-base text-gray-500">{contributions[0] && StartDate}</p>
-    </div>
-
-   </div>
   );
 }
