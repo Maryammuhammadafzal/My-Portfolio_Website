@@ -1758,7 +1758,15 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
-import { Github, Linkedin, Twitter, Mail, ChevronDown, ChevronLeft, ChevronRight } from "lucide-react";
+import {
+  Github,
+  Linkedin,
+  Twitter,
+  Mail,
+  ChevronDown,
+  ChevronLeft,
+  ChevronRight,
+} from "lucide-react";
 import Image from "next/image";
 import Head from "next/head";
 import { TwitterLogoIcon } from "@radix-ui/react-icons";
@@ -1821,7 +1829,9 @@ const Portfolio = () => {
               className="flex items-center"
             >
               <span className="text-2xl flex justify-center items-center font-extrabold tracking-tight">
-                <ChevronLeft size={30} className="mt-1 -mr-2" />MernStackDeveloper<ChevronRight size={30} className="mt-2 -ml-2" />
+                <ChevronLeft size={30} className="mt-1 -mr-2" />
+                MernStackDeveloper
+                <ChevronRight size={30} className="mt-2 -ml-2" />
               </span>
             </motion.div>
             <div className="hidden md:flex items-center space-x-10">
@@ -1874,23 +1884,37 @@ const Portfolio = () => {
       </motion.nav>
 
       {/* Hero Section */}
-      <section id="home" className="min-h-screen flex flex-col space-y-6 items-center pb-20 pt-5 bg-white">
+      <section
+        id="home"
+        className="min-h-screen flex flex-col space-y-6 items-center pb-20 pt-5 bg-white"
+      >
         <div className="w-[95%] h-auto py-6 px-3">
-          <h1 className="main-heading w-full uppercase sm:text-5xl md:text-6xl font-bold ">Mern Stack Developer</h1>
-          <h1 className="main-heading w-full uppercase sm:text-5xl md:text-6xl font-bold ">Maryam Afzal</h1>
+          <h1 className="main-heading w-full uppercase sm:text-5xl md:text-6xl font-bold ">
+            Mern Stack Developer
+          </h1>
+          <h1 className="main-heading w-full uppercase sm:text-5xl md:text-6xl font-bold ">
+            Maryam Afzal
+          </h1>
         </div>
-        <div className="w-full max-w-8xl mx-auto px-4 sm:px-6 lg:px-20 py-6 flex flex-col md:flex-row items-center">
+        <div className="w-full max-w-8xl mx-auto px-4 sm:px-6 lg:px-20 py-6 flex flex-col md:flex-row items-center justify-between">
           <motion.div
             initial={{ opacity: 0, x: -100 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, ease: 'easeOut' }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
             className="md:w-1/2 mb-10 md:mb-0"
           >
-            <h2 className="text-3xl sm:text-lg md:text-xl font-extrabold flex leading-tight mb-6">
-             <ChevronLeft size={25} className="-mr-1" /> <span className="skillsname">React.js Next.js Redux.js Node.js Mongodb JavaScript </span> <ChevronRight size={25} className="-ml-1" />
+            <h2 className="text-3xl  sm:text-lg md:text-xl font-extrabold flex leading-tight mb-6">
+              <ChevronLeft size={25} className="-mr-1" />{" "}
+              <span className="skillsname">
+                React.js Next.js Redux.js Node.js JavaScript{" "}
+              </span>{" "}
+              <ChevronRight size={25} className="-ml-1" />
             </h2>
-            <p className="text-lg text-gray-600 mb-8 max-w-xl pl-4">
-              I'm a Mern Stack developer with more than 2 years of experience and passionate about building intuitive and responsive web applications with modern technologies.
+            <p className="text-lg text-gray-600 mb-8 max-w-lg pl-4">
+              A Mern stack developer with experience in both team projects and
+              individual work, I focus on building scalable, efficient
+              solutions. With a background in engineering, I bring a structured,
+              problem-solving mindset to development.
             </p>
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <Button className="ml-3 px-14 py-5 h-12 rounded-3xl text-lg bg-lime-300 font-bold hover:bg-lime-400 text-black">
@@ -1901,16 +1925,35 @@ const Portfolio = () => {
           <motion.div
             initial={{ opacity: 0, x: 100 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.2, ease: 'easeOut' }}
-            className="md:w-1/2"
+            transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+            className="md:w-1/2 flex justify-end"
           >
-            <div className="bg-gray-300 h-64 md:h-80 rounded-lg overflow-hidden flex items-center justify-center shadow-lg">
+            <div className="max-w-2xl bg-gray-300 h-64 md:h-80 rounded-lg overflow-hidden flex items-center justify-center shadow-lg">
               <GitHubContributions />
               {/* <img src="https://green-wall.leoku.dev/share/Maryammuhammadafzal?start=2024&showSafariHeader=false&showAttribution=false" alt="GitHub Contributions Chart"/> */}
               {/* <img src="https://github-readme-stats.vercel.app/api?username=yourusername&show_icons=true&hide_title=true&hide=issues" alt="GitHub Contributions Chart"/> */}
               {/* <iframe src="https://ghchart.rshah.org/maryammuhammadafzal" width="100%" height="300px"></iframe> */}
             </div>
           </motion.div>
+        </div>
+      </section>
+
+      {/* Projects Section */}
+      <section className="flex w-full px-3 py-20 bg-neutral-900 justify-center  min-h-screen">
+        <div className="w-[93%] flex flex-col gap-20">
+          <h3 className="text-white text-[120px] uppercase font-bold">
+            Selected Projects
+          </h3>
+          <div className="w-full h-auto flex flex-col gap-20">
+            {
+              projects.map((project, index) => (
+                <div key={index} className="project w-full h-auto flex justify-between">
+                  <div className="left max-w-2xl flex flex-col justify-between h-auto">
+                    <h4 className="text-6xl font-bold text-gray-400">01</h4>
+                  </div>
+                </div>
+              ))}
+          </div>
         </div>
       </section>
     </div>
