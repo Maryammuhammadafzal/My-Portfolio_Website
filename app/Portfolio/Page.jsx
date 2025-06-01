@@ -1949,7 +1949,9 @@ const Portfolio = () => {
               projects.map((project, index) => (
                 <div key={index} className="project w-full h-auto flex justify-between">
                   <div className="left max-w-2xl flex flex-col justify-between h-auto">
-                    <h4 className="text-8xl font-bold text-gray-400 flex items-center"><ChevronLeft size={70} /> 0{index+1}<ChevronRight/></h4>
+                    <h4 className="text-8xl font-bold text-neutral-400  items-center">  
+                       &lt;0{index+1}&gt;
+                </h4>
                   </div>
                 </div>
               ))}
