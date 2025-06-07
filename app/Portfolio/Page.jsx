@@ -1792,13 +1792,14 @@ const projects = [
     title: "Portfolio Website",
     description:
       "A sleek, modern portfolio with responsive design and animations.",
-    image: "/images/project1.jpg",
+    image: "/Mockup-1.avif",
+    image2: "/Mockup-2.jpg"
   },
   {
     title: "E-Commerce Platform",
     description:
       "A scalable e-commerce solution with seamless payment integration.",
-    image: "/images/project2.jpg",
+    image: "",
   },
   {
     title: "Task Manager",
@@ -2000,9 +2001,9 @@ const Portfolio = () => {
                     </p>
                   </div>
                 </div>
-                <div className="right grid grid-rows-2">
-                  <Image src={project.image} alt="image" width={300} height={400} />
-                  <Image src={project.image} alt="image" width={300} height={400} /> 
+                <div className="right grid grid-rows-2 gap-5">
+                  <Image src={project.image} alt="image" width={500} height={600} className="rounded-lg w-[800px]" />
+                  <Image src={project.image2} alt="image" width={500} height={600} className="rounded-lg w-[800px]" /> 
                 </div>
               </div>
             ))}
