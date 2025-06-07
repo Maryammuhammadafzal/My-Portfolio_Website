@@ -1799,12 +1799,14 @@ const projects = [
     title: "E-Commerce Platform",
     description:
       "A scalable e-commerce solution with seamless payment integration.",
-    image: "",
+    image: "/mockup-3.webp",
+    image2: "/mockup-4.webp",
   },
   {
     title: "Task Manager",
     description: "A real-time collaborative task management application.",
-    image: "/images/project3.jpg",
+    image: "/mockup-5.webp",
+    image2: "/mockup-6.webp",
   },
 ];
 
@@ -2011,7 +2013,7 @@ const Portfolio = () => {
         </div>
       </section>
 
-      <section className="flex w-full px-3 py-20 bg-neutral-900 justify-center  min-h-screen">
+      <section className="flex w-full px-3 py-20 justify-center  min-h-screen">
 
       </section>
     </div>
