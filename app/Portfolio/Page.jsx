@@ -1792,8 +1792,8 @@ const projects = [
     title: "Portfolio Website",
     description:
       "A sleek, modern portfolio with responsive design and animations.",
-    image: "/Mockup-1.avif",
-    image2: "/Mockup-2.jpg"
+    image: "/mockup-2.webp",
+    image2: "/mockup-1.webp"
   },
   {
     title: "E-Commerce Platform",
@@ -1951,7 +1951,7 @@ const Portfolio = () => {
                 key={index}
                 className="project w-full h-auto flex justify-between"
               >
-                <div className="left max-w-2xl  flex flex-col justify-between h-auto">
+                <div className="left max-w-2xl w-[50%]  flex flex-col justify-between h-auto">
                   <div className="flex flex-col gap-6">
                     <h4 className="text-8xl font-extrabold text-neutral-500  items-center">
                       &lt;{index + 1}&gt;
@@ -2001,9 +2001,9 @@ const Portfolio = () => {
                     </p>
                   </div>
                 </div>
-                <div className="right grid grid-rows-2 gap-5">
-                  <Image src={project.image} alt="image" width={500} height={600} className="rounded-lg w-[800px]" />
-                  <Image src={project.image2} alt="image" width={500} height={600} className="rounded-lg w-[800px]" /> 
+                <div className=" w-[45%] right flex flex-col gap-5">
+                  <Image src={project.image} alt="image" width={800} height={200} className="rounded-lg w-full" />
+                  <Image src={project.image2} alt="image" width={500} height={200} className="rounded-lg w-full" /> 
                 </div>
               </div>
             ))}
