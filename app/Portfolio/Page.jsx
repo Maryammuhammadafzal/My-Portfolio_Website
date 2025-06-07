@@ -1793,7 +1793,7 @@ const projects = [
     description:
       "A sleek, modern portfolio with responsive design and animations.",
     image: "/mockup-2.webp",
-    image2: "/mockup-1.webp"
+    image2: "/mockup-1.webp",
   },
   {
     title: "E-Commerce Platform",
@@ -1834,7 +1834,7 @@ const Portfolio = () => {
               <span className="text-2xl flex justify-center items-center font-extrabold tracking-tight">
                 <ChevronLeft size={30} className="mt-1 -mr-2" />
                 MernStackDeveloper
-                <ChevronRight size={30} className="mt-2 -ml-2" />
+                <ChevronRight size={30} className="mt-1 -ml-2" />
               </span>
             </motion.div>
             <div className="hidden md:flex items-center space-x-10">
@@ -1989,12 +1989,10 @@ const Portfolio = () => {
                     <p className="text-white">
                       As a full-stack developer on this project, I took
                       ownership of both the frontend and backend development,
-                      ensuring a seamless and intuitive user experience.
-                      
-                       I built the frontend from scratch using modern frameworks and
+                      ensuring a seamless and intuitive user experience. I built
+                      the frontend from scratch using modern frameworks and
                       tools like Next.js, TypeScript, and Tailwind CSS, adhering
                       to industry best practices for structure and scalability.
-                      
                       On the backend, I implemented a secure and efficient
                       system using MongoDB for data management and Google
                       Authentication for user login, Additionally, I integrated
@@ -2004,8 +2002,20 @@ const Portfolio = () => {
                   </div>
                 </div>
                 <div className=" w-[45%] right flex flex-col gap-5">
-                  <Image src={project.image} alt="image" width={800} height={200} className="rounded-lg w-full" />
-                  <Image src={project.image2} alt="image" width={500} height={200} className="rounded-lg w-full" /> 
+                  <Image
+                    src={project.image}
+                    alt="image"
+                    width={800}
+                    height={200}
+                    className="rounded-lg w-full"
+                  />
+                  <Image
+                    src={project.image2}
+                    alt="image"
+                    width={500}
+                    height={200}
+                    className="rounded-lg w-full"
+                  />
                 </div>
               </div>
             ))}
@@ -2014,7 +2024,24 @@ const Portfolio = () => {
       </section>
 
       <section className="flex w-full px-3 py-20 justify-center  min-h-screen">
+        <div className="w-[93%] flex flex-col gap-20">
+          <h3 className="text-[120px] uppercase font-bold">Services</h3>
+          <div className="w-full h-auto flex flex-col gap-20">
+            <div className="w-full grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-3">
+              <div className="rounded-lg bg-white flex flex-col gap-5 justiy-center py-10 px-3">
+                <div className="icon rounded-lg bg-lime-300 p-3 flex justify-center items-center w-10 text-white h-10">
 
+                </div>
+                <h2 className="title font-bold text-black">
+                  Frontend Development
+                </h2>
+                <p>
+                  Building responsive and inituative user interface using modern Frameworks like React, Javascript , Next js with Tailwind Css.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
     </div>
   );
