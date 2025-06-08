@@ -84,8 +84,8 @@ export default function DigitalClock() {
         </span>
       </div>
       <div className="flex items-center justify-between w-full text-lime-300 ">
-        <p className="text-3xl md:text-4xl font-bold uppercase font-sans">HOUR</p>
-        <p className="text-3xl md:text-4xl font-bold uppercase font-sans">Second</p>
+        <p className="text-2xl md:text-3xl font-bold uppercase font-sans">HOUR</p>
+        <p className="text-2xl md:text-3xl font-bold uppercase font-sans">Second</p>
       </div>
     </div>
   );

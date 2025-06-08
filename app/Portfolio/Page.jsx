@@ -1768,6 +1768,8 @@ import {
   ChevronLeft,
   ChevronRight,
   Icon,
+  ArrowUp,
+  ArrowUpRight,
 } from "lucide-react";
 import Image from "next/image";
 import Head from "next/head";
@@ -1816,21 +1818,21 @@ const projects = [
 
 const contacts = [
   {
-    url : "",
-    text: "abc",
-    service: "email"
+    text: "bibimariummuhammadafzal123@gmail.com",
+    url: "mailto:bibimariummuhammadafzal123r@gmail.com",
+    service: "Email",
   },
   {
-    url : "",
-    text: "abc",
-    service: "email"
+    text: "Marium BiBi",
+    url: " https://www.facebook.com/profile.php?id=61557444029142",
+    service: "Faceboon",
   },
   {
-    url : "",
-    text: "abc",
-    service: "email"
-  }
-]
+    text: "/in/marium-afzal-3bibi21",
+    url: "https://www.linkedin.com/in/marium-afzal-3bibi21",
+    service: " LinkedIn ",
+  },
+];
 
 const Portfolio = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -2094,47 +2096,99 @@ const Portfolio = () => {
         </div>
       </section>
 
-      <section aria-label="Clock and contacts section" id="contacts" className="container flex flex-col justify-center items-center gap-10">
-      <div className="w-[85%] flex flex-col gap-5">
-          <h3 className="text-[120px] uppercase font-sans font-bold">Let's Connect</h3>
+      <section
+        aria-label="Clock and contacts section"
+        id="contacts"
+        className="container flex flex-col justify-center  py-20 items-center gap-10"
+      >
+        <div className="w-[85%] flex flex-col gap-5">
+          <h3 className="text-[120px] uppercase font-sans font-bold">
+            Let's Connect
+          </h3>
 
-      <motion.div className="flex flex-col-reverse lg:flex-row justify-between items-start gap-10">
-        <div className="w-full flex justify-start items-center xl:w-1/2">
-          <DigitalClock />
-        </div>
-        <div className="flex font-sans flex-col justify-between items-center gap-10 w-full xl:w-1/2 ">
-          <p>
-            Thank you for stopping by! I’m always excited to explore new
-            opportunities and collaborations. Let’s connect through email,
-            phone, LinkedIn, or GitHub—I’d love to hear from you!
-          </p>
-          <ul className="flex font-sans flex-col md:flex-row flex-wrap justify-start lg:justify-between items-start gap-4 lg:gap-2 w-full">
-            {contacts && contacts.map((contact , index)=> (
-               <li key={index} className="flex flex-col items-start gap-1">
-                  <Link
-                    href={contact.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label={`Link to contact ${contact.url}`}
-                    className="group flex flex-col items-start font-bold gap-2 cursor-pointer transition-all duration-300 hover:text-grey_500"
-                  >
-                    {contact.text}
-                    <Icon
+          <motion.div className="flex flex-col-reverse lg:flex-row justify-between items-start gap-10">
+            <div className="w-full flex justify-start items-center xl:w-1/2">
+              <DigitalClock />
+            </div>
+            <div className="flex font-sans flex-col justify-between items-center gap-10 w-full xl:w-1/2 ">
+              <p>
+                Thank you for stopping by! I’m always excited to explore new
+                opportunities and collaborations. Let’s connect through email,
+                phone, LinkedIn, or GitHub—I’d love to hear from you!
+              </p>
+              <ul className="flex font-sans flex-col flex-wrap justify-start lg:justify-between items-start gap-4 lg:gap-2 w-full">
+                {contacts.map((contact, index) => (
+                  <li key={index} className="flex flex-col items-start gap-1">
+                    <Link
+                      href={contact.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`Link to contact ${contact.url}`}
+                      className="group flex flex-col items-start font-bold gap-2 cursor-pointer transition-all duration-300 hover:text-grey_500"
+                    >
+                      {contact.text}
+                      {/* <Icon
                       id="icon-arrow-up-right"
                       width={12}
                       height={12}
                       className="text-black group-hover:text-grey_500"
-                    />
-                  </Link>
-                  <p className="">{contact.service}</p>
-                </li>
-            ))}
-          </ul>
+                    /> */}
+                      <ArrowUpRight className="text-black group-hover:text-grey_500" />
+                    </Link>
+                    <p className="">{contact.service}</p>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </motion.div>
         </div>
-      </motion.div>
-      </div>
-    </section>
+      </section>
 
+      <footer className="w-full h-auto text-white bg-neutral-900 justify-center items-center flex font-sans">
+        <div className="w-[95%] flex justify-center items-center lg:gap-8 flex-col h-auto py-6 px-3">
+           <div className="max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex font-sans justify-between items-center h-20">
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.2 }}
+              className="flex items-center"
+            >
+              <span className="text-2xl flex justify-center items-center font-extrabold tracking-tight">
+                <ChevronLeft size={30} className="mt-1 -mr-2" />
+                MaryamAfzal
+                <ChevronRight size={30} className="mt-1 -ml-2" />
+              </span>
+            </motion.div>
+            <div className="hidden md:flex items-center space-x-10">
+              {navItems.map((item) => (
+                <motion.a
+                  key={item.name}
+                  href={item.href}
+                  className="text-gray-700 hover:text-blue-500 transition-colors duration-300"
+                  whileHover={{ scale: 1.1 }}
+                >
+                  {item.name}
+                </motion.a>
+              ))}
+            </div>
+            <div className="md:hidden flex items-center">
+              <Button variant="ghost" onClick={() => setIsOpen(!isOpen)}>
+                <ChevronDown
+                  className={`h-6 w-6 transform transition-transform ${
+                    isOpen ? "rotate-180" : ""
+                  }`}
+                />
+              </Button>
+            </div>
+          </div>
+        </div>
+          <h1 className="main-heading text-center w-full uppercase sm:text-5xl md:text-6xl font-bold ">
+            Mern Stack Developer
+          </h1>
+
+        </div>
+      </footer>
     </div>
   );
 };
