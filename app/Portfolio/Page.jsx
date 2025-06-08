@@ -1781,8 +1781,11 @@ import DigitalClock from "@/components/DigitalClockDynamic";
 const navItems = [
   { name: "Projects", href: "#project" },
   { name: "Service", href: "#service" },
-  { name: "Github", href: "https://github.com/Maryammuhammadafzal/My-Portfolio_Website" },
-  { name: "My CV", href: "#projects" },
+  {
+    name: "Github",
+    href: "https://github.com/Maryammuhammadafzal/My-Portfolio_Website",
+  },
+  { name: "My CV", href: "/Maryam-Cv.pdf", download: true },
   { name: "Contact", href: "#contact" },
 ];
 
@@ -1819,7 +1822,7 @@ const projects = [
 const contacts = [
   {
     text: "bibimariummuhammadafzal123@gmail.com",
-    url: "mailto:bibimariummuhammadafzal123r@gmail.com",
+    url: "mailto:bibimariummuhammadafzal123@gmail.com",
     service: "Email",
   },
   {
@@ -1855,7 +1858,10 @@ const Portfolio = () => {
               transition={{ delay: 0.2 }}
               className="flex items-center"
             >
-              <a href="#home" className="text-2xl flex justify-center items-center font-extrabold tracking-tight">
+              <a
+                href="#home"
+                className="text-2xl flex justify-center items-center font-extrabold tracking-tight"
+              >
                 <ChevronLeft size={30} className="mt-1 -mr-2" />
                 MaryamAfzal/
                 <ChevronRight size={30} className="mt-1 -ml-2" />
@@ -1866,6 +1872,13 @@ const Portfolio = () => {
                 <motion.a
                   key={item.name}
                   href={item.href}
+                  {...(item.download ? { download: true } : {})}
+                  target={item.href.startsWith("http") ? "_blank" : "_self"}
+                  rel={
+                    item.href.startsWith("http")
+                      ? "noopener noreferrer"
+                      : undefined
+                  }
                   className="text-gray-700 hover:text-lime-500 text-lg transition-colors duration-300"
                   whileHover={{ scale: 1.1 }}
                 >
@@ -1966,7 +1979,10 @@ const Portfolio = () => {
       </section>
 
       {/* Projects Section */}
-      <section id="project" className="flex font-sans w-full px-3 py-20 bg-neutral-900 justify-center  min-h-screen">
+      <section
+        id="project"
+        className="flex font-sans w-full px-3 py-20 bg-neutral-900 justify-center  min-h-screen"
+      >
         <div className="w-[93%] flex flex-col gap-20">
           <h3 className="text-white text-[120px] uppercase font-bold">
             Selected Projects
@@ -2047,7 +2063,10 @@ const Portfolio = () => {
         </div>
       </section>
 
-      <section id="service" className="flex font-sans w-full px-3 py-20 justify-center  min-h-screen">
+      <section
+        id="service"
+        className="flex font-sans w-full px-3 py-20 justify-center  min-h-screen"
+      >
         <div className="w-[93%] flex flex-col gap-20">
           <h3 className="text-[120px] uppercase font-bold">Services</h3>
           <div className="w-full h-auto flex flex-col gap-20">
@@ -2154,7 +2173,10 @@ const Portfolio = () => {
                 transition={{ delay: 0.2 }}
                 className="flex items-center"
               >
-                <a href="#home" className="text-2xl flex justify-center items-center font-extrabold tracking-tight">
+                <a
+                  href="#home"
+                  className="text-2xl flex justify-center items-center font-extrabold tracking-tight"
+                >
                   {/* <ChevronLeft size={30} className="mt-1 -mr-2" /> */}
                   &lt;MaryamAfzal/&gt;
                   {/* <ChevronRight size={30} className="mt-1 -ml-2" /> */}
