@@ -1758,6 +1758,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
+import codeImage from "../../public/code-image.webp";
 import {
   Github,
   Linkedin,
@@ -2028,16 +2029,57 @@ const Portfolio = () => {
           <h3 className="text-[120px] uppercase font-bold">Services</h3>
           <div className="w-full h-auto flex flex-col gap-20">
             <div className="w-full grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-3">
+              {/* Services Cards */}
               <div className="rounded-lg bg-white flex flex-col gap-5 justiy-center py-10 px-3">
-                <div className="icon rounded-lg bg-lime-300 p-3 flex justify-center items-center w-10 text-white h-10">
-
-                </div>
+                <div className="icon rounded-lg bg-lime-300 p-3 flex justify-center items-center w-10 text-white h-10"></div>
                 <h2 className="title font-bold text-black">
                   Frontend Development
                 </h2>
                 <p>
-                  Building responsive and inituative user interface using modern Frameworks like React, Javascript , Next js with Tailwind Css.
+                  Building responsive and inituative user interface using modern
+                  Frameworks like React, Javascript , Next js with Tailwind Css.
                 </p>
+              </div>
+              <div className="rounded-lg bg-white flex flex-col gap-5 justiy-center py-10 px-3">
+                <div className="icon rounded-lg bg-lime-300 p-3 flex justify-center items-center w-10 text-white h-10"></div>
+                <h2 className="title font-bold text-black">
+                  Frontend Development
+                </h2>
+                <p>
+                  Building responsive and inituative user interface using modern
+                  Frameworks like React, Javascript , Next js with Tailwind Css.
+                </p>
+              </div>
+              <div className="rounded-lg bg-white flex flex-col gap-5 justiy-center py-10 px-3">
+                <div className="icon rounded-lg bg-lime-300 p-3 flex justify-center items-center w-10 text-white h-10"></div>
+                <h2 className="title font-bold text-black">
+                  Frontend Development
+                </h2>
+                <p>
+                  Building responsive and inituative user interface using modern
+                  Frameworks like React, Javascript , Next js with Tailwind Css.
+                </p>
+              </div>
+            </div>
+            <div className="image w-full p-5 flex h-auto justify-center items-center">
+              <Image
+                src={codeImage}
+                width={1600}
+                height={400}
+                className="rounded-lg"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="flex bg-neutral-100 w-full px-3 py-20 justify-center h-auto">
+        <div className="w-[93%] flex flex-col gap-20">
+          <h3 className="text-[120px] uppercase font-bold">Let's Connect</h3>
+          <div className="w-full h-auto flex gap-20">
+            <div className="w-[50%] p-3 h-auto flex justify-center items-center">
+              <div className="clock rounded-lg w-[600px] h-[300px] bg-white p-3 flex justify-center items-center">
+
               </div>
             </div>
           </div>
