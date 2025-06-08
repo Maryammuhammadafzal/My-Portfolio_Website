@@ -33,10 +33,10 @@ export default function DigitalClock() {
       {/* w-[288px] h-[140px] sm:w-[525px] sm:h-[258px] lg:w-[343px] lg:h-[150px] aspect-[288/80]
       xl:w-[525px] xl:h-[258px] */}
       <div className="flex items-center justify-between w-full">
-        <p className="font-bold">My Local Time </p>
-        <p className="text-gray-200 uppercase">{formattedDate}</p>
+        <p className="text-xl font-sans">My Local Time </p>
+        <p className="text-gray-400 text-xl font-sans uppercase">{formattedDate}</p>
       </div>
-      <div className="flex justify-between gap-2 w-full font-advanced-pixel-lcd font-bold text-6xl responsive-clock">
+      <div className="flex justify-between gap-2 font-advanced-pixel-lcd w-full font-bold text-6xl responsive-clock">
         {" "}
         {/* //sm:text-5xl lg:text-3xl xl:text-5xl */}
         <span
@@ -45,47 +45,47 @@ export default function DigitalClock() {
         >
           88
           <span
-            className={`absolute text-black top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2`}
+            className={`absolute text-black font-advanced-pixel-lcd top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2`}
           >
             {hours}
           </span>
         </span>
         {/*  */}
-        <span key={nanoid()} className="text-black">
+        <span key={nanoid()} className="text-black font-advanced-pixel-lcd">
           :
         </span>
         {/*  */}
         <span
           key={nanoid()}
-          className="relative flex items-center justify-center text-gray-200 w-full"
+          className="relative flex items-center font-advanced-pixel-lcd justify-center text-gray-200 w-full"
         >
           88
           <span
-            className={`absolute text-black top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2`}
+            className={`absolute text-black font-advanced-pixel-lcd top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2`}
           >
             {minutes}
           </span>
         </span>
         {/*  */}
-        <span key={nanoid()} className="text-black">
+        <span key={nanoid()} className="font-advanced-pixel-lcd text-black">
           :
         </span>
         {/*  */}
         <span
           key={nanoid()}
-          className="relative flex items-center justify-center text-gray-200 w-full "
+          className="relative flex items-center font-advanced-pixel-lcd justify-center text-gray-200 w-full "
         >
           88
           <span
-            className={`absolute text-black top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2`}
+            className={`absolute text-black font-advanced-pixel-lcd top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2`}
           >
             {seconds}
           </span>
         </span>
       </div>
       <div className="flex items-center justify-between w-full text-lime-300 ">
-        <p className="text-3xl md:text-4xl font-bold">CET</p>
-        <p className="text-3xl md:text-4xl font-bold">WARSAW</p>
+        <p className="text-3xl md:text-4xl font-bold uppercase font-sans">HOUR</p>
+        <p className="text-3xl md:text-4xl font-bold uppercase font-sans">Second</p>
       </div>
     </div>
   );

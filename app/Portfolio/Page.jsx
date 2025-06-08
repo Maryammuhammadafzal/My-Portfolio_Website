@@ -1846,7 +1846,7 @@ const Portfolio = () => {
         className="sticky top-0 z-50 bg-white"
       >
         <div className="max-w-8xl w-full mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-20">
+          <div className="flex font-sans justify-between items-center h-20">
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -1889,7 +1889,7 @@ const Portfolio = () => {
               animate={{ height: "auto", opacity: 1 }}
               exit={{ height: 0, opacity: 0 }}
               transition={{ duration: 0.3 }}
-              className="md:hidden bg-white shadow-md"
+              className="md:hidden font-sans bg-white shadow-md"
             >
               <div className="px-4 pt-2 pb-3 space-y-2">
                 {navItems.map((item) => (
@@ -1911,7 +1911,7 @@ const Portfolio = () => {
       {/* Hero Section */}
       <section
         id="home"
-        className="min-h-screen flex flex-col space-y-6 items-center pb-20 pt-5 bg-white"
+        className="min-h-screen font-sans flex flex-col space-y-6 items-center pb-20 pt-5 bg-white"
       >
         <div className="w-[95%] h-auto py-6 px-3">
           <h1 className="main-heading w-full uppercase sm:text-5xl md:text-6xl font-bold ">
@@ -1964,7 +1964,7 @@ const Portfolio = () => {
       </section>
 
       {/* Projects Section */}
-      <section className="flex w-full px-3 py-20 bg-neutral-900 justify-center  min-h-screen">
+      <section className="flex font-sans w-full px-3 py-20 bg-neutral-900 justify-center  min-h-screen">
         <div className="w-[93%] flex flex-col gap-20">
           <h3 className="text-white text-[120px] uppercase font-bold">
             Selected Projects
@@ -2045,7 +2045,7 @@ const Portfolio = () => {
         </div>
       </section>
 
-      <section className="flex w-full px-3 py-20 justify-center  min-h-screen">
+      <section className="flex font-sans w-full px-3 py-20 justify-center  min-h-screen">
         <div className="w-[93%] flex flex-col gap-20">
           <h3 className="text-[120px] uppercase font-bold">Services</h3>
           <div className="w-full h-auto flex flex-col gap-20">
@@ -2095,23 +2095,22 @@ const Portfolio = () => {
       </section>
 
       <section aria-label="Clock and contacts section" id="contacts" className="container flex flex-col justify-center items-center gap-10">
-      <div className="w-[93%] flex flex-col  ">
-          <h3 className="text-[120px] uppercase font-bold">Let's Connect</h3>
+      <div className="w-[85%] flex flex-col gap-5">
+          <h3 className="text-[120px] uppercase font-sans font-bold">Let's Connect</h3>
 
-      <motion.div className=" flex flex-col-reverse lg:flex-row justify-between items-start gap-10">
-        <div className="flex justify-start items-center w-full xl:w-1/2">
+      <motion.div className="flex flex-col-reverse lg:flex-row justify-between items-start gap-10">
+        <div className="w-full flex justify-start items-center xl:w-1/2">
           <DigitalClock />
         </div>
-        <div className=" flex flex-col justify-between items-center gap-10 w-full xl:w-1/2 ">
+        <div className="flex font-sans flex-col justify-between items-center gap-10 w-full xl:w-1/2 ">
           <p>
             Thank you for stopping by! I’m always excited to explore new
             opportunities and collaborations. Let’s connect through email,
             phone, LinkedIn, or GitHub—I’d love to hear from you!
           </p>
-          <ul className="flex flex-col md:flex-row flex-wrap justify-start lg:justify-between items-start gap-4 lg:gap-2 w-full">
-            {/* {contacts && contacts.map((contact, index) => {
-              return (
-                <li key={index} className="flex flex-col items-start gap-1">
+          <ul className="flex font-sans flex-col md:flex-row flex-wrap justify-start lg:justify-between items-start gap-4 lg:gap-2 w-full">
+            {contacts && contacts.map((contact , index)=> (
+               <li key={index} className="flex flex-col items-start gap-1">
                   <Link
                     href={contact.url}
                     target="_blank"
@@ -2129,8 +2128,7 @@ const Portfolio = () => {
                   </Link>
                   <p className="">{contact.service}</p>
                 </li>
-              );
-            })} */}
+            ))}
           </ul>
         </div>
       </motion.div>

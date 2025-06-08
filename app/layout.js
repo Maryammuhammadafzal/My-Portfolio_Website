@@ -56,7 +56,7 @@ export default function RootLayout({ children }) {
       <head>
         <link rel="icon" type="image/svg+xml" href="/icons/favicon.svg"></link>
       </head>
-      <body className={`${monaSans.variable} ${advanced_pixel_lcd.variable} ${advanced_pixel_lcd.className}`}>
+      <body className={`${monaSans.variable} ${suse.variable} ${advanced_pixel_lcd.variable} ${advanced_pixel_lcd.className}`}>
         {children}
       </body>
     </html>
