@@ -1,5 +1,6 @@
 import {  Mona_Sans , SUSE } from "next/font/google";
 import "./globals.css";
+import localFont from "next/font/local";
 
 const monaSans = Mona_Sans({
   variable: "--font-mona-sans",
@@ -16,6 +17,17 @@ const suse = SUSE({
 //   title: "Portfolio | Mern Stack Developer",
 //   description: "Showcasing my skills and projects as a mern stack developer",
 // };
+
+const advanced_pixel_lcd = localFont({
+  src: [
+    {
+      path: "../public/fonts/advanced_pixel/advanced_pixel_lcd-7.ttf",
+      weight: "400",
+      style: "normal",
+    },
+  ],
+  variable: "--font-advanced-pixel-lcd",
+});
 
 export const metadata = {
   title: "Full Stack Dev Maryam Afzal",
@@ -44,7 +56,7 @@ export default function RootLayout({ children }) {
       <head>
         <link rel="icon" type="image/svg+xml" href="/icons/favicon.svg"></link>
       </head>
-      <body className={`${monaSans.variable}`}>
+      <body className={`${monaSans.variable} ${advanced_pixel_lcd.variable} ${advanced_pixel_lcd.className}`}>
         {children}
       </body>
     </html>

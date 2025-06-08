@@ -1774,6 +1774,7 @@ import Head from "next/head";
 import { TwitterLogoIcon } from "@radix-ui/react-icons";
 import GitHubContributions from "@/components/GitHubContributions";
 import Link from "next/link";
+import DigitalClock from "@/components/DigitalClockDynamic";
 
 const navItems = [
   { name: "Home", href: "#home" },
@@ -2093,12 +2094,13 @@ const Portfolio = () => {
         </div>
       </section>
 
-      <section aria-label="Clock and contacts section" id="contacts" className="container flex flex-col gap-10">
-      <motion.h2 >Let’s connect</motion.h2>
+      <section aria-label="Clock and contacts section" id="contacts" className="container flex flex-col justify-center items-center gap-10">
+      <div className="w-[93%] flex flex-col  ">
+          <h3 className="text-[120px] uppercase font-bold">Let's Connect</h3>
 
       <motion.div className=" flex flex-col-reverse lg:flex-row justify-between items-start gap-10">
         <div className="flex justify-start items-center w-full xl:w-1/2">
-          {/* <DigitalClockDynamic /> */}
+          <DigitalClock />
         </div>
         <div className=" flex flex-col justify-between items-center gap-10 w-full xl:w-1/2 ">
           <p>
@@ -2107,7 +2109,7 @@ const Portfolio = () => {
             phone, LinkedIn, or GitHub—I’d love to hear from you!
           </p>
           <ul className="flex flex-col md:flex-row flex-wrap justify-start lg:justify-between items-start gap-4 lg:gap-2 w-full">
-            {contacts.map((contact, index) => {
+            {/* {contacts && contacts.map((contact, index) => {
               return (
                 <li key={index} className="flex flex-col items-start gap-1">
                   <Link
@@ -2128,10 +2130,11 @@ const Portfolio = () => {
                   <p className="">{contact.service}</p>
                 </li>
               );
-            })}
+            })} */}
           </ul>
         </div>
       </motion.div>
+      </div>
     </section>
 
     </div>
