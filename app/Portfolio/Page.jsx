@@ -1779,10 +1779,10 @@ import Link from "next/link";
 import DigitalClock from "@/components/DigitalClockDynamic";
 
 const navItems = [
-  { name: "Home", href: "#home" },
-  { name: "About", href: "#about" },
-  { name: "Skills", href: "#skills" },
-  { name: "Projects", href: "#projects" },
+  { name: "Projects", href: "#project" },
+  { name: "Service", href: "#service" },
+  { name: "Github", href: "https://github.com/Maryammuhammadafzal/My-Portfolio_Website" },
+  { name: "My CV", href: "#projects" },
   { name: "Contact", href: "#contact" },
 ];
 
@@ -1855,18 +1855,18 @@ const Portfolio = () => {
               transition={{ delay: 0.2 }}
               className="flex items-center"
             >
-              <span className="text-2xl flex justify-center items-center font-extrabold tracking-tight">
+              <a href="#home" className="text-2xl flex justify-center items-center font-extrabold tracking-tight">
                 <ChevronLeft size={30} className="mt-1 -mr-2" />
-                MernStackDeveloper
+                MaryamAfzal/
                 <ChevronRight size={30} className="mt-1 -ml-2" />
-              </span>
+              </a>
             </motion.div>
             <div className="hidden md:flex items-center space-x-10">
               {navItems.map((item) => (
                 <motion.a
                   key={item.name}
                   href={item.href}
-                  className="text-gray-700 hover:text-blue-500 transition-colors duration-300"
+                  className="text-gray-700 hover:text-lime-500 text-lg transition-colors duration-300"
                   whileHover={{ scale: 1.1 }}
                 >
                   {item.name}
@@ -1945,7 +1945,7 @@ const Portfolio = () => {
             </p>
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <Button className="ml-3 px-14 py-5 h-12 rounded-3xl text-lg bg-lime-300 font-bold hover:bg-lime-400 text-black">
-                Let's Connect
+                <a href="#contact">Let's Connect</a>
               </Button>
             </motion.div>
           </motion.div>
@@ -1966,7 +1966,7 @@ const Portfolio = () => {
       </section>
 
       {/* Projects Section */}
-      <section className="flex font-sans w-full px-3 py-20 bg-neutral-900 justify-center  min-h-screen">
+      <section id="project" className="flex font-sans w-full px-3 py-20 bg-neutral-900 justify-center  min-h-screen">
         <div className="w-[93%] flex flex-col gap-20">
           <h3 className="text-white text-[120px] uppercase font-bold">
             Selected Projects
@@ -2047,7 +2047,7 @@ const Portfolio = () => {
         </div>
       </section>
 
-      <section className="flex font-sans w-full px-3 py-20 justify-center  min-h-screen">
+      <section id="service" className="flex font-sans w-full px-3 py-20 justify-center  min-h-screen">
         <div className="w-[93%] flex flex-col gap-20">
           <h3 className="text-[120px] uppercase font-bold">Services</h3>
           <div className="w-full h-auto flex flex-col gap-20">
@@ -2098,7 +2098,7 @@ const Portfolio = () => {
 
       <section
         aria-label="Clock and contacts section"
-        id="contacts"
+        id="contact"
         className="container flex flex-col justify-center  py-20 items-center gap-10"
       >
         <div className="w-[85%] flex flex-col gap-5">
@@ -2146,47 +2146,49 @@ const Portfolio = () => {
 
       <footer className="w-full h-auto text-white bg-neutral-900 justify-center items-center flex font-sans">
         <div className="w-[95%] flex justify-center items-center lg:gap-8 flex-col h-auto py-6 px-3">
-           <div className="max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex font-sans justify-between items-center h-20">
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.2 }}
-              className="flex items-center"
-            >
-              <span className="text-2xl flex justify-center items-center font-extrabold tracking-tight">
-                <ChevronLeft size={30} className="mt-1 -mr-2" />
-                MaryamAfzal
-                <ChevronRight size={30} className="mt-1 -ml-2" />
-              </span>
-            </motion.div>
-            <div className="hidden md:flex items-center space-x-10">
-              {navItems.map((item) => (
-                <motion.a
-                  key={item.name}
-                  href={item.href}
-                  className="text-gray-700 hover:text-blue-500 transition-colors duration-300"
-                  whileHover={{ scale: 1.1 }}
-                >
-                  {item.name}
-                </motion.a>
-              ))}
-            </div>
-            <div className="md:hidden flex items-center">
-              <Button variant="ghost" onClick={() => setIsOpen(!isOpen)}>
-                <ChevronDown
-                  className={`h-6 w-6 transform transition-transform ${
-                    isOpen ? "rotate-180" : ""
-                  }`}
-                />
-              </Button>
+          <div className="max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex font-sans justify-between items-center h-20">
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.2 }}
+                className="flex items-center"
+              >
+                <a href="#home" className="text-2xl flex justify-center items-center font-extrabold tracking-tight">
+                  {/* <ChevronLeft size={30} className="mt-1 -mr-2" /> */}
+                  &lt;MaryamAfzal/&gt;
+                  {/* <ChevronRight size={30} className="mt-1 -ml-2" /> */}
+                </a>
+              </motion.div>
+              <div className="text-white flex items-center space-x-10">
+                {navItems.map((item) => (
+                  <motion.a
+                    key={item.name}
+                    href={item.href}
+                    className="transition-colors duration-300"
+                    whileHover={{ scale: 1.1 }}
+                  >
+                    {item.name}
+                  </motion.a>
+                ))}
+              </div>
+              <div className="md:hidden flex items-center">
+                <Button variant="ghost" onClick={() => setIsOpen(!isOpen)}>
+                  <ChevronDown
+                    className={`h-6 w-6 transform transition-transform ${
+                      isOpen ? "rotate-180" : ""
+                    }`}
+                  />
+                </Button>
+              </div>
             </div>
           </div>
-        </div>
-          <h1 className="main-heading text-center w-full uppercase sm:text-5xl md:text-6xl font-bold ">
+          <h1 className="main-heading py-6 border-b border-neutral-500 text-center w-full uppercase sm:text-5xl md:text-6xl font-bold ">
             Mern Stack Developer
           </h1>
-
+          <div className="flex text-lg justify-center items-center text-neutral-500">
+            ©Copyright Maryam Afzal 2025. All Rights Reserved
+          </div>
         </div>
       </footer>
     </div>
