@@ -363,7 +363,7 @@ const Portfolio = () => {
         className="container flex flex-col justify-center  py-20 items-center gap-10"
       >
         <div className="w-[85%] flex flex-col gap-5">
-          <h3 className="text-[120px] uppercase font-sans font-bold">
+          <h3 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-[120px] uppercase font-sans font-bold">
             Let's Connect
           </h3>
 
