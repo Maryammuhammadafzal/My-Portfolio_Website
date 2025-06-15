@@ -95,7 +95,7 @@ export default function GitHubContributions() {
   }
 
   return (
-    <div className="max-w-2xl h-full bg-white flex flex-col justify-center items-center">
+    <div className="max-w-2xl h-full bg-white flex flex-col overflow-hidden justify-center items-center">
       <div className="w-full px-5 flex justify-between items-start">
         <p className="text-base text-gray-500">
           {contributions.length} Contributions
