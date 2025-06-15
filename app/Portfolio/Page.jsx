@@ -226,7 +226,7 @@ const Portfolio = () => {
         className="flex font-sans w-full px-3 py-20 bg-neutral-900 justify-center  min-h-screen"
       >
         <div className="w-[93%] flex flex-col gap-20">
-          <h3 className="text-white text-[120px] uppercase font-bold">
+          <h3 className="text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-[120px] uppercase font-bold">
             Selected Projects
           </h3>
           <div className="w-full h-auto flex flex-col gap-20">
