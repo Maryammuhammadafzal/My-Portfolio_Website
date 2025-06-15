@@ -90,7 +90,7 @@ const Portfolio = () => {
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.1, ease: "easeOut" }}
-        className="sticky top-0 z-50 bg-white"
+        className="sticky top-0 z-50 w-full h-auto bg-white"
       >
         <div className="max-w-8xl w-full mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex font-sans justify-between items-center h-20">
@@ -98,7 +98,7 @@ const Portfolio = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.2 }}
-              className="flex items-center"
+              className="flex  items-center"
             >
               <a
                 href="#home"
@@ -171,7 +171,7 @@ const Portfolio = () => {
         className="min-h-screen font-sans flex flex-col space-y-6 items-center pb-20 pt-5 bg-white"
       >
         <div className="w-[95%] h-auto py-6 px-3">
-          <h1 className="main-heading w-full uppercase sm:text-5xl md:text-6xl font-bold ">
+          <h1 className="main-heading w-full uppercase text-4xl sm:text-5xl md:text-6xl font-bold ">
             Mern Stack Developer
           </h1>
           <h1 className="main-heading w-full uppercase sm:text-5xl md:text-6xl font-bold ">
