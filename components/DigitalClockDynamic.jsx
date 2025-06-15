@@ -27,7 +27,7 @@ export default function DigitalClock() {
   return (
     <div
       aria-labelledby="Digital Clock"
-      className={`flex flex-col items-center justify-between gap-6 bg-white rounded-[20px] w-full max-w-[525px] md:max-w-[725px] xl:max-w-[525px] md:aspect-[288/80] lg:aspect-[525/258]
+      className={`flex flex-col items-center justify-between gap-6 bg-white rounded-[20px] w-full 2xl:max-w-[525px] md:max-w-[725px] xl:max-w-[525px] md:aspect-[288/80] lg:aspect-[525/258]
      p-6`}
     >
       {/* w-[288px] h-[140px] sm:w-[525px] sm:h-[258px] lg:w-[343px] lg:h-[150px] aspect-[288/80]

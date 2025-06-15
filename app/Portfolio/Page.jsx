@@ -407,7 +407,7 @@ const Portfolio = () => {
 
       <footer className="w-full h-auto text-white bg-neutral-900 justify-center items-center flex font-sans">
         <div className="w-[95%] flex justify-center items-center lg:gap-8 flex-col h-auto py-6 px-3">
-          <div className="max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="2xl:max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex font-sans justify-between items-center h-20">
               <motion.div
                 initial={{ opacity: 0 }}
