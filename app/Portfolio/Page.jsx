@@ -210,7 +210,7 @@ const Portfolio = () => {
             transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
             className="md:w-1/2 flex justify-end"
           >
-            <div className="2xl:max-w-3xl w-full bg-gray-300 h-64 md:h-80 rounded-lg overflow-hidden flex items-center justify-center shadow-lg">
+            <div className="2xl:max-w-3xl w-[50%] bg-gray-300 h-64 md:h-80 rounded-lg overflow-hidden flex items-center justify-center shadow-lg">
               <GitHubContributions />
               {/* <img src="https://green-wall.leoku.dev/share/Maryammuhammadafzal?start=2024&showSafariHeader=false&showAttribution=false" alt="GitHub Contributions Chart"/> */}
               {/* <img src="https://github-readme-stats.vercel.app/api?username=yourusername&show_icons=true&hide_title=true&hide=issues" alt="GitHub Contributions Chart"/> */}
