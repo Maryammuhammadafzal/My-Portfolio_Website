@@ -171,10 +171,10 @@ const Portfolio = () => {
         className="min-h-screen font-sans flex flex-col space-y-6 items-center pb-20 pt-5 bg-white"
       >
         <div className="w-[95%] h-auto py-6 px-3">
-          <h1 className="main-heading w-full uppercase text-4xl sm:text-5xl md:text-6xl font-bold ">
+          <h1 className="main-heading w-full uppercase text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-[104px] font-bold ">
             Mern Stack Developer
           </h1>
-          <h1 className="main-heading w-full uppercase sm:text-5xl md:text-6xl font-bold ">
+          <h1 className="main-heading w-full uppercase text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-[104px] font-bold ">
             Maryam Afzal
           </h1>
         </div>
@@ -210,7 +210,7 @@ const Portfolio = () => {
             transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
             className="md:w-1/2 flex justify-end"
           >
-            <div className="max-w-2xl bg-gray-300 h-64 md:h-80 rounded-lg overflow-hidden flex items-center justify-center shadow-lg">
+            <div className="2xl:max-w-3xl w-full bg-gray-300 h-64 md:h-80 rounded-lg overflow-hidden flex items-center justify-center shadow-lg">
               <GitHubContributions />
               {/* <img src="https://green-wall.leoku.dev/share/Maryammuhammadafzal?start=2024&showSafariHeader=false&showAttribution=false" alt="GitHub Contributions Chart"/> */}
               {/* <img src="https://github-readme-stats.vercel.app/api?username=yourusername&show_icons=true&hide_title=true&hide=issues" alt="GitHub Contributions Chart"/> */}
