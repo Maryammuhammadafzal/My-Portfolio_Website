@@ -310,7 +310,7 @@ const Portfolio = () => {
         className="flex font-sans w-full px-3 py-20 justify-center  min-h-screen"
       >
         <div className="w-[93%] flex flex-col gap-20">
-          <h3 className="text-[120px] uppercase font-bold">Services</h3>
+          <h3 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-[120px] uppercase font-bold">Services</h3>
           <div className="w-full h-auto flex flex-col gap-20">
             <div className="w-full grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-3">
               {/* Services Cards */}
