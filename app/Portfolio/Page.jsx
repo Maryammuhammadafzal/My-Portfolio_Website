@@ -424,7 +424,7 @@ const Portfolio = () => {
                   {/* <ChevronRight size={30} className="mt-1 -ml-2" /> */}
                 </a>
               </motion.div>
-              <div className="text-white flex items-center space-x-10">
+              <div className="text-white flex max-sm:hidden items-center space-x-10">
                 {navItems.map((item) => (
                   <motion.a
                     key={item.name}
@@ -447,10 +447,10 @@ const Portfolio = () => {
               </div>
             </div>
           </div>
-          <h1 className="main-heading py-6 border-b border-neutral-500 text-center w-full uppercase sm:text-5xl md:text-6xl font-bold ">
+          <h1 className="main-heading py-6 border-b border-neutral-500 text-center w-full uppercase text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-[104px] l font-bold ">
             Mern Stack Developer
           </h1>
-          <div className="flex text-lg justify-center items-center text-neutral-500">
+          <div className="flex lg:text-lg md:text-md sm:text-sm text-xs py-3 justify-center items-center text-neutral-500">
             ©Copyright Maryam Afzal 2025. All Rights Reserved
           </div>
         </div>
