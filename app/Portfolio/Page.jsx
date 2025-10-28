@@ -8,6 +8,7 @@ import {
   ChevronLeft,
   ChevronRight,
   ArrowUpRight,
+  ExternalLink,
 } from "lucide-react";
 import Image from "next/image";
 import GitHubContributions from "@/components/GitHubContributions";
@@ -32,31 +33,35 @@ const navItems = [
 //   { name: "Next.js", level: 75 },
 // ];
 
-import ProjectImage1 from "../../public/mockup-2.webp"
-import ProjectImage2 from "../../public/mockup-1.webp"
-import ProjectImage3 from "../../public/mockup-3.webp"
-import ProjectImage4 from "../../public/mockup-4.webp"
-import ProjectImage5 from "../../public/mockup-5.webp"
-import ProjectImage6 from "../../public/mockup-6.webp"
+import ProjectImage1 from "../../public/Mockup-4.jpeg";
+import ProjectImage2 from "../../public/Mockup-1.png";
+import ProjectImage3 from "../../public/Mockup-2.jpeg";
+import ProjectImage4 from "../../public/Mockup-5.png";
+import ProjectImage5 from "../../public/Mockup-3.jpg";
+import ProjectImage6 from "../../public/Mockup-6.gif";
 
 const projects = [
   {
     title: "Portfolio Website",
+    link: "https://digital-horizon-three.vercel.app/",
     description:
       "A sleek, modern portfolio with responsive design and animations.",
     image: ProjectImage1.src,
     image2: ProjectImage2.src,
   },
   {
-    title: "E-Commerce Platform",
+    title: "Law & Firm Website",
+    link: "https://law-firm-landing-page-pied.vercel.app/",
     description:
-      "A scalable e-commerce solution with seamless payment integration.",
+      "A law firm-ready system with automated case workflows and secure client communication.",
     image: ProjectImage3.src,
     image2: ProjectImage4.src,
   },
   {
-    title: "Task Manager",
-    description: "A real-time collaborative task management application.",
+    title: "Online Banking Website",
+    link: "https://banking-landing-page-delta.vercel.app/",
+    description:
+      "Help you to manage your finance and keep your money safe with online banking.",
     image: ProjectImage5.src,
     image2: ProjectImage6.src,
   },
@@ -241,7 +246,13 @@ const Portfolio = () => {
                       &lt;{index + 1}&gt;
                     </h4>
                     <h2 className="text-3xl font-bold text-white">
-                      {project.title}
+                      {project.title}{" "}
+                      <span className="text-sm text-neutral-500 font-normal pl-1">
+                        <Link target="_blank" href={project.link}>
+                          Visit{" "}
+                          <ExternalLink className="h-4 w-4 inline-block" />{" "}
+                        </Link>
+                      </span>
                     </h2>
                     <div>
                       <h3 className="text-sm text-neutral-500">Role</h3>
@@ -284,20 +295,24 @@ const Portfolio = () => {
                   </div>
                 </div>
                 <div className=" w-[45%] right flex flex-col gap-5">
-                  <Image
-                    src={project.image}
-                    alt="image"
-                    width={800}
-                    height={200}
-                    className="rounded-lg w-full"
-                  />
-                  <Image
-                    src={project.image2}
-                    alt="image"
-                    width={500}
-                    height={200}
-                    className="rounded-lg w-full"
-                  />
+                  <Link target="_blank" href={project.link}>
+                    <Image
+                      src={project.image}
+                      alt="image"
+                      width={800}
+                      height={200}
+                      className="rounded-lg w-full"
+                    />
+                  </Link>
+                  <Link target="_blank" href={project.link}>
+                    <Image
+                      src={project.image2}
+                      alt="image"
+                      width={500}
+                      height={200}
+                      className="rounded-lg w-full"
+                    />
+                  </Link>
                 </div>
               </div>
             ))}
@@ -310,7 +325,9 @@ const Portfolio = () => {
         className="flex font-sans w-full px-3 py-20 justify-center  min-h-screen"
       >
         <div className="w-[93%] flex flex-col gap-20">
-          <h3 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-[120px] uppercase font-bold">Services</h3>
+          <h3 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-[120px] uppercase font-bold">
+            Services
+          </h3>
           <div className="w-full h-auto flex flex-col gap-20">
             <div className="w-full grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-3">
               {/* Services Cards */}
@@ -326,22 +343,20 @@ const Portfolio = () => {
               </div>
               <div className="rounded-lg bg-white flex flex-col gap-5 justiy-center py-10 px-3">
                 <div className="icon rounded-lg bg-lime-300 p-3 flex justify-center items-center w-10 text-white h-10"></div>
-                <h2 className="title font-bold text-black">
-                  Frontend Development
-                </h2>
+                <h2 className="title font-bold text-black">UI / UX Design</h2>
                 <p>
-                  Building responsive and inituative user interface using modern
-                  Frameworks like React, Javascript , Next js with Tailwind Css.
+                  Crafting user-centered layouts and interactive prototypes
+                  using Figma to ensure a smooth and engaging user journey.
                 </p>
               </div>
               <div className="rounded-lg bg-white flex flex-col gap-5 justiy-center py-10 px-3">
                 <div className="icon rounded-lg bg-lime-300 p-3 flex justify-center items-center w-10 text-white h-10"></div>
                 <h2 className="title font-bold text-black">
-                  Frontend Development
+                  Backend & Integrations
                 </h2>
                 <p>
-                  Building responsive and inituative user interface using modern
-                  Frameworks like React, Javascript , Next js with Tailwind Css.
+                  Developing secure and scalable backend solutions with Node.js
+                  and Firebase including authentication and API integrations.
                 </p>
               </div>
             </div>
