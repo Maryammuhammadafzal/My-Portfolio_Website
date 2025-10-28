@@ -19,7 +19,7 @@ const navItems = [
   { name: "Service", href: "#service" },
   {
     name: "Github",
-    href: "https://github.com/Maryammuhammadafzal/My-Portfolio_Website",
+    href: "https://github.com/Maryammuhammadafzal/",
   },
   { name: "My CV", href: "/Maryam-Cv.pdf", download: true },
   { name: "Contact", href: "#contact" },
