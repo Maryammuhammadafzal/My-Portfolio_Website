@@ -9,6 +9,9 @@ import {
   ChevronRight,
   ArrowUpRight,
   ExternalLink,
+  CodeXml,
+  Figma,
+  Database,
 } from "lucide-react";
 import Image from "next/image";
 import GitHubContributions from "@/components/GitHubContributions";
@@ -332,7 +335,7 @@ const Portfolio = () => {
             <div className="w-full grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-3">
               {/* Services Cards */}
               <div className="rounded-lg bg-white flex flex-col gap-5 justiy-center py-10 px-3">
-                <div className="icon rounded-lg bg-lime-300 p-3 flex justify-center items-center w-10 text-white h-10"></div>
+                <div className="icon rounded-lg bg-lime-300 p-3 flex justify-center items-center w-10 text-black font-bold h-10"><CodeXml/></div>
                 <h2 className="title font-bold text-black">
                   Frontend Development
                 </h2>
@@ -342,7 +345,7 @@ const Portfolio = () => {
                 </p>
               </div>
               <div className="rounded-lg bg-white flex flex-col gap-5 justiy-center py-10 px-3">
-                <div className="icon rounded-lg bg-lime-300 p-3 flex justify-center items-center w-10 text-white h-10"></div>
+                <div className="icon rounded-lg bg-lime-300 p-3 flex justify-center items-center w-10 text-black h-10"><Figma/></div>
                 <h2 className="title font-bold text-black">UI / UX Design</h2>
                 <p>
                   Crafting user-centered layouts and interactive prototypes
@@ -350,7 +353,7 @@ const Portfolio = () => {
                 </p>
               </div>
               <div className="rounded-lg bg-white flex flex-col gap-5 justiy-center py-10 px-3">
-                <div className="icon rounded-lg bg-lime-300 p-3 flex justify-center items-center w-10 text-white h-10"></div>
+                <div className="icon rounded-lg bg-lime-300 p-3 flex justify-center items-center w-10 text-black h-10"><Database/></div>
                 <h2 className="title font-bold text-black">
                   Backend & Integrations
                 </h2>
